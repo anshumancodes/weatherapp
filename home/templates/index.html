@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherapp</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <span>
+                weatherapp
+            </span>
+            <span class="links">
+                <a href="">about</a>
+                <a href="">code</a>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <div class="user">
+            <input type="text" placeholder=" Enter your city" name="citysearch" id="searchcity">
+            <span class="cityname">Cityname</span>
+
+
+        </div>
+        <div class="data">
+            <div class="daynddate"><span>5:05pm</span>
+                <span>monday</span>
+                <span>Nov 23 , 2023</span>
+            </div>
+            <div class="temp">
+                <span class="material-icons graphics">
+                    filter_drama
+                </span>
+                <a href="">72°c</a>
+                <div class="sky">
+                    Cloudy
+                </div>
+            </div>
+            <div class="otherdetails">
+               <span>
+                <a href="">Humidity</a>
+                <a href="">92%</a>
+               </span>
+               <span>
+                <a href="">Windspeed</a>
+                <a href="">92kmph</a>
+               </span>
+            </div>
+
+
+        </div>
+    </main>
+<script>
+   
+    function changeSpan() {
+    let userInput = document.getElementById("searchcity").value;
+    document.getElementsByClassName("cityname").innerHTML = userInput;
+}
+changeSpan()
+</script>
+</body>
+
+</html>
