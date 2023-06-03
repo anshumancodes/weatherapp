@@ -26,33 +26,37 @@
     </header>
     <main>
         <div class="user">
-            <input type="text" placeholder=" Enter your city" name="citysearch" id="searchcity">
-            <span class="cityname">Cityname</span>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" placeholder=" Enter your city" name="city" id="searchcity">
+                <button type="submit">Search</button>
+            </form>
+            <span class="cityname">{{city}} {{country}}</span>
 
 
         </div>
         <div class="data">
-            <div class="daynddate"><span>5:05pm</span>
-                <span>monday</span>
-                <span>Nov 23 , 2023</span>
+            <div class="daynddate" ><span>date:</span>
+                <a href="" name="timezone">{{data.date}}</a>
+
             </div>
             <div class="temp">
                 <span class="material-icons graphics">
                     filter_drama
                 </span>
-                <a href="">72°c</a>
-                <div class="sky">
-                    Cloudy
+                <a href="" name="temperature">{{data.temperature}}</a>
+                <div class="sky" name="sky">
+                    {{sky}}
                 </div>
             </div>
             <div class="otherdetails">
                <span>
                 <a href="">Humidity</a>
-                <a href="">92%</a>
+                <a href="" name="Humidity">{{data.Humidity}}%</a>
                </span>
                <span>
                 <a href="">Windspeed</a>
-                <a href="">92kmph</a>
+                <a href="" name="Windspeed">{{data.Windspeed}}</a>
                </span>
             </div>
 
@@ -61,11 +65,7 @@
     </main>
 <script>
    
-    function changeSpan() {
-    let userInput = document.getElementById("searchcity").value;
-    document.getElementsByClassName("cityname").innerHTML = userInput;
-}
-changeSpan()
+    
 </script>
 </body>
 
