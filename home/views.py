@@ -14,7 +14,7 @@ def home(request):
 
    if request.method =='POST':
       city=request.POST['city']
-      print(city)
+      
       
       
 
@@ -33,7 +33,7 @@ def home(request):
       
       lati=str(location_cord[0]['lat'])
       longi=str(location_cord[0]['lon'])
-      print(lati,longi)
+     
      
 
     
@@ -45,6 +45,7 @@ def home(request):
    #to get the temp in celius
       kelvin=response_data['main']['temp']
       celsius = kelvin - 273.15
+      temp=int(celsius)
 
       
 
@@ -52,7 +53,7 @@ def home(request):
       
       weather_data={
          "country":str(response_data['sys']['country']),
-         "temperature":str(celsius)+'°C',
+         "temperature":str(temp)+'°C',
 
          "sky":str(response_data['weather'][0]['description']),
          "Windspeed":str(response_data['wind']['speed']),

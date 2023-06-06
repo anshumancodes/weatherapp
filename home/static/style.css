@@ -17,6 +17,7 @@ header{
     display: flex;
     width: 100%;
     justify-content: center;
+    
 }
 header nav {
     width: 80%;
@@ -24,6 +25,7 @@ header nav {
     padding: 3vh 0 3vh 0;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--color-3);
 
 }
 header nav span{
@@ -57,6 +59,7 @@ main .user input{
     border: 3px solid var(--color-3);
 
 }
+
 main .user form button{
     padding: 1vh 2vw;
     background-color: var(--color-3);
@@ -67,6 +70,7 @@ main .user form button{
     border: 0;
    
 }
+
 main .user .cityname{
     font-size: 1.3rem;
 }
@@ -105,4 +109,10 @@ main .data .otherdetails .card{
     border-radius: 21px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     background: var(--color-1);
+}
+/* breakpoints */
+@media screen and (max-width:800px) {
+    main .user form #searchcity{
+        width: 290px;
+    }
 }
