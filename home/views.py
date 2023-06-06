@@ -38,7 +38,7 @@ def home(request):
 
     
 # weather api
-      response=urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?lat='+lati+'&lon='+longi+'&appid=92956e6e0fee0ffafec6d1637eb73a8c').read()
+      response=urllib.request.urlopen('https://api.openweathermap.org/data/2.5/weather?lat='+lati+'&lon='+longi+'&appid='+apikeys.weatherapikey).read()
       response_data=json.loads(response)
    #   to get the date:
       date_now=date.today()
