@@ -74,4 +74,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 - Weather data provided by [OpenWeather](https://openweathermap.org/).
 - Built with [Django](https://www.djangoproject.com/).
 
-Feel free to customize the README.md file according to your project's specific details and requirements.
+
