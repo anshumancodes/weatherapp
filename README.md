@@ -8,7 +8,9 @@ WeatherApp is a simple web application that provides current weather information
 
 - Allow users to search for the current weather of a specific location.
 - Display the temperature, weather condition, humidity, and wind speed for the searched location.
-- Support for both Celsius and Fahrenheit temperature units.
+
+ To be added:
+- Support for  Celsius and Fahrenheit temperature units.
 - Display relevant weather icons based on the weather condition.
 
 ## Prerequisites
