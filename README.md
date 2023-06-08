@@ -1,4 +1,3 @@
-Certainly! Here's the README.md version of the README file for a simple weather app built using the OpenWeather API and Django:
 
 # WeatherApp
 
